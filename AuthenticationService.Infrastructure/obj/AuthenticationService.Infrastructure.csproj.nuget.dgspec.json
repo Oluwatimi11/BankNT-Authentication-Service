@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationService.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/AuthenticationService.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/AuthenticationService.Core.csproj",
+        "projectName": "AuthenticationService.Core",
+        "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/AuthenticationService.Core.csproj",
+        "packagesPath": "/Users/thebluehood/.nuget/packages/",
+        "outputPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/thebluehood/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj": {
+                "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.20.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.58.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.58.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RavenDB.Client": {
+              "target": "Package",
+              "version": "[5.4.5, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Sinks.RavenDB": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj",
+        "projectName": "AuthenticationService.Domain",
+        "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj",
+        "packagesPath": "/Users/thebluehood/.nuget/packages/",
+        "outputPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/thebluehood/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationService.Infrastructure.csproj",
+        "projectName": "AuthenticationService.Infrastructure",
+        "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationService.Infrastructure.csproj",
+        "packagesPath": "/Users/thebluehood/.nuget/packages/",
+        "outputPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/thebluehood/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/AuthenticationService.Core.csproj": {
+                "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/AuthenticationService.Core.csproj"
+              },
+              "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj": {
+                "projectPath": "/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Domain/AuthenticationService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

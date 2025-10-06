@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Bnt-AuthenticationService.API.props" />
+</Project>

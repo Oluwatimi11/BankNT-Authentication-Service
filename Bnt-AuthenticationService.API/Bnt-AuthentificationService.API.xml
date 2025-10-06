@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<doc>
+    <assembly>
+        <name>Bnt-AuthenticationService.API</name>
+    </assembly>
+    <members>
+        <member name="M:Bnt-AuthenticationService.API.Controllers.AuthController.Register(AuthenticationService.Core.DTOs.RegistrationDTO)">
+            <summary>
+            Validates, Register and Creates Wallet for User
+            </summary>
+            <returns>Registration Status.</returns>
+        </member>
+    </members>
+</doc>
+

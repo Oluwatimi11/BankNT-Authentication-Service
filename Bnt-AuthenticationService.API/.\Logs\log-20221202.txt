@@ -1,0 +1,772 @@
+2022-12-02 13:37:45.135 +01:00 [INF] the application has started
+2022-12-02 13:37:46.721 +01:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:37:46.903 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:37:47.017 +01:00 [FTL]    at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamReader(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllTextAsync(String path, Encoding encoding, CancellationToken cancellationToken)
+   at AuthenticationService.Infrastructure.AuthenticationServiceDbInitializer.Seed(IApplicationBuilder builder) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationServiceDbInitializer.cs:line 23
+   at Program.<Main>$(String[] args) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/Program.cs:line 42
+2022-12-02 13:39:01.809 +01:00 [INF] the application has started
+2022-12-02 13:39:03.276 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:39:03.456 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:39:03.563 +01:00 [FTL]    at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamReader(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllTextAsync(String path, Encoding encoding, CancellationToken cancellationToken)
+   at AuthenticationService.Infrastructure.AuthenticationServiceDbInitializer.Seed(IApplicationBuilder builder) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationServiceDbInitializer.cs:line 23
+   at Program.<Main>$(String[] args) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/Program.cs:line 42
+2022-12-02 13:40:56.785 +01:00 [INF] the application has started
+2022-12-02 13:40:58.146 +01:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:40:58.327 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:40:58.433 +01:00 [FTL]    at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamReader(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllTextAsync(String path, Encoding encoding, CancellationToken cancellationToken)
+   at AuthenticationService.Infrastructure.AuthenticationServiceDbInitializer.Seed(IApplicationBuilder builder) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Infrastructure/AuthenticationServiceDbInitializer.cs:line 23
+   at Program.<Main>$(String[] args) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/Program.cs:line 42
+2022-12-02 13:41:34.399 +01:00 [INF] the application has started
+2022-12-02 13:41:35.947 +01:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:41:36.130 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:41:36.323 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2022-12-02 13:41:36.427 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2022-12-02 13:41:36.463 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2022-12-02 13:41:36.491 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2022-12-02 13:41:36.496 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:41:36.514 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:41:36.568 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:36.574 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:36.623 +01:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:36.668 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:36.672 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:36.706 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:36.707 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:36.754 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:36.755 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:36.756 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:36.758 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:36.806 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:36.832 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:36.833 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:36.860 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:36.887 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:36.889 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:36.889 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:36.912 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:36.912 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:36.943 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.018 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.018 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.044 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.194 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.265 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.272 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.275 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.277 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.278 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.332 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.334 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.336 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.337 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.363 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.366 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.395 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.397 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.398 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.447 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.501 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.531 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.533 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.535 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.537 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.539 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.566 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.569 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.597 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.599 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AuthenticationService.Infrastructure.AuthenticationServiceDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-12-02 13:41:37.600 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.703 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.705 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.735 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2022-12-02 13:41:37.738 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2022-12-02 13:41:37.787 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."BVN", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."ImageUrl", a."IsActive", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."Publicid", a."RefreshToken", a."RefreshTokenExpiryTime", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-12-02 13:41:37.813 +01:00 [WRN] User validation failed: InvalidUserName.
+2022-12-02 13:41:37.895 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = DateTime), @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?', @p9='?' (DbType = Boolean), @p10='?', @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTime), @p13='?', @p14='?', @p15='?', @p16='?', @p17='?' (DbType = Boolean), @p18='?', @p19='?', @p20='?' (DbType = DateTime), @p21='?', @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTime), @p24='?', @p25='?', @p26='?' (DbType = Int32), @p27='?', @p28='?', @p29='?' (DbType = DateTime), @p30='?', @p31='?' (DbType = Boolean), @p32='?', @p33='?', @p34='?' (DbType = Boolean), @p35='?', @p36='?' (DbType = Boolean), @p37='?' (DbType = DateTime), @p38='?', @p39='?', @p40='?', @p41='?', @p42='?' (DbType = Boolean), @p43='?', @p44='?', @p45='?' (DbType = DateTime), @p46='?', @p47='?' (DbType = Boolean), @p48='?' (DbType = DateTime), @p49='?', @p50='?', @p51='?' (DbType = Int32), @p52='?', @p53='?', @p54='?' (DbType = DateTime), @p55='?', @p56='?' (DbType = Boolean), @p57='?', @p58='?', @p59='?' (DbType = Boolean), @p60='?', @p61='?' (DbType = Boolean), @p62='?' (DbType = DateTime), @p63='?', @p64='?', @p65='?', @p66='?', @p67='?' (DbType = Boolean), @p68='?', @p69='?', @p70='?' (DbType = DateTime), @p71='?', @p72='?' (DbType = Boolean), @p73='?' (DbType = DateTime), @p74='?', @p75='?', @p76='?' (DbType = Int32), @p77='?', @p78='?', @p79='?' (DbType = DateTime), @p80='?', @p81='?' (DbType = Boolean), @p82='?', @p83='?', @p84='?' (DbType = Boolean), @p85='?', @p86='?' (DbType = Boolean), @p87='?' (DbType = DateTime), @p88='?', @p89='?', @p90='?', @p91='?', @p92='?' (DbType = Boolean), @p93='?', @p94='?', @p95='?' (DbType = DateTime), @p96='?', @p97='?' (DbType = Boolean), @p98='?' (DbType = DateTime), @p99='?', @p100='?', @p101='?' (DbType = Int32), @p102='?', @p103='?', @p104='?' (DbType = DateTime), @p105='?', @p106='?' (DbType = Boolean), @p107='?', @p108='?', @p109='?' (DbType = Boolean), @p110='?', @p111='?' (DbType = Boolean), @p112='?' (DbType = DateTime), @p113='?', @p114='?', @p115='?', @p116='?', @p117='?' (DbType = Boolean), @p118='?', @p119='?', @p120='?' (DbType = DateTime), @p121='?', @p122='?' (DbType = Boolean), @p123='?' (DbType = DateTime), @p124='?', @p125='?', @p126='?' (DbType = Int32), @p127='?', @p128='?', @p129='?' (DbType = DateTime), @p130='?', @p131='?' (DbType = Boolean), @p132='?', @p133='?', @p134='?' (DbType = Boolean), @p135='?', @p136='?' (DbType = Boolean), @p137='?' (DbType = DateTime), @p138='?', @p139='?', @p140='?', @p141='?', @p142='?' (DbType = Boolean), @p143='?', @p144='?', @p145='?' (DbType = DateTime), @p146='?', @p147='?' (DbType = Boolean), @p148='?' (DbType = DateTime), @p149='?', @p150='?', @p151='?' (DbType = Int32), @p152='?', @p153='?', @p154='?' (DbType = DateTime), @p155='?', @p156='?' (DbType = Boolean), @p157='?', @p158='?', @p159='?' (DbType = Boolean), @p160='?', @p161='?' (DbType = Boolean), @p162='?' (DbType = DateTime), @p163='?', @p164='?', @p165='?', @p166='?', @p167='?' (DbType = Boolean), @p168='?', @p169='?', @p170='?' (DbType = DateTime), @p171='?', @p172='?' (DbType = Boolean), @p173='?' (DbType = DateTime), @p174='?', @p175='?', @p176='?' (DbType = Int32), @p177='?', @p178='?', @p179='?' (DbType = DateTime), @p180='?', @p181='?' (DbType = Boolean), @p182='?', @p183='?', @p184='?' (DbType = Boolean), @p185='?', @p186='?' (DbType = Boolean), @p187='?' (DbType = DateTime), @p188='?', @p189='?', @p190='?', @p191='?', @p192='?' (DbType = Boolean), @p193='?', @p194='?', @p195='?' (DbType = DateTime), @p196='?', @p197='?' (DbType = Boolean), @p198='?' (DbType = DateTime), @p199='?', @p200='?', @p201='?' (DbType = Int32), @p202='?', @p203='?', @p204='?' (DbType = DateTime), @p205='?', @p206='?' (DbType = Boolean), @p207='?', @p208='?', @p209='?' (DbType = Boolean), @p210='?', @p211='?' (DbType = Boolean), @p212='?' (DbType = DateTime), @p213='?', @p214='?', @p215='?', @p216='?', @p217='?' (DbType = Boolean), @p218='?', @p219='?', @p220='?' (DbType = DateTime), @p221='?', @p222='?' (DbType = Boolean), @p223='?' (DbType = DateTime), @p224='?', @p225='?', @p226='?' (DbType = Int32), @p227='?', @p228='?', @p229='?' (DbType = DateTime), @p230='?', @p231='?' (DbType = Boolean), @p232='?', @p233='?', @p234='?' (DbType = Boolean), @p235='?', @p236='?' (DbType = Boolean), @p237='?' (DbType = DateTime), @p238='?', @p239='?', @p240='?', @p241='?', @p242='?' (DbType = Boolean), @p243='?', @p244='?', @p245='?' (DbType = DateTime), @p246='?', @p247='?' (DbType = Boolean), @p248='?' (DbType = DateTime), @p249='?', @p250='?', @p251='?', @p252='?', @p253='?' (DbType = DateTime), @p254='?', @p255='?', @p256='?' (DbType = DateTime), @p257='?', @p258='?', @p259='?', @p260='?' (DbType = DateTime), @p261='?', @p262='?', @p263='?' (DbType = DateTime), @p264='?', @p265='?', @p266='?', @p267='?' (DbType = DateTime), @p268='?', @p269='?', @p270='?' (DbType = DateTime), @p271='?', @p272='?', @p273='?', @p274='?' (DbType = DateTime), @p275='?', @p276='?', @p277='?' (DbType = DateTime), @p278='?', @p279='?', @p280='?', @p281='?' (DbType = DateTime), @p282='?', @p283='?', @p284='?' (DbType = DateTime), @p285='?', @p286='?', @p287='?', @p288='?' (DbType = DateTime), @p289='?', @p290='?', @p291='?' (DbType = DateTime), @p292='?', @p293='?', @p294='?', @p295='?' (DbType = DateTime), @p296='?', @p297='?', @p298='?' (DbType = DateTime), @p299='?', @p300='?', @p301='?', @p302='?' (DbType = DateTime), @p303='?', @p304='?', @p305='?' (DbType = DateTime), @p306='?', @p307='?', @p308='?', @p309='?' (DbType = DateTime), @p310='?', @p311='?', @p312='?' (DbType = DateTime), @p313='?', @p314='?', @p315='?', @p316='?' (DbType = DateTime), @p317='?', @p318='?', @p319='?' (DbType = DateTime), @p320='?', @p321='?', @p322='?', @p323='?' (DbType = DateTime), @p324='?', @p325='?', @p326='?' (DbType = DateTime), @p327='?', @p328='?', @p329='?', @p330='?' (DbType = DateTime), @p331='?', @p332='?', @p333='?' (DbType = DateTime), @p334='?', @p335='?', @p336='?', @p337='?' (DbType = DateTime), @p338='?', @p339='?', @p340='?' (DbType = DateTime), @p341='?', @p342='?', @p343='?', @p344='?' (DbType = DateTime), @p345='?', @p346='?', @p347='?' (DbType = DateTime), @p348='?', @p349='?', @p350='?', @p351='?' (DbType = DateTime), @p352='?', @p353='?', @p354='?' (DbType = DateTime), @p355='?', @p356='?', @p357='?', @p358='?' (DbType = DateTime), @p359='?', @p360='?', @p361='?' (DbType = DateTime), @p362='?', @p363='?', @p364='?', @p365='?' (DbType = DateTime), @p366='?', @p367='?', @p368='?' (DbType = DateTime), @p369='?', @p370='?', @p371='?', @p372='?' (DbType = DateTime), @p373='?', @p374='?', @p375='?' (DbType = DateTime), @p376='?', @p377='?', @p378='?', @p379='?' (DbType = DateTime), @p380='?', @p381='?', @p382='?' (DbType = DateTime), @p383='?', @p384='?', @p385='?', @p386='?' (DbType = DateTime), @p387='?', @p388='?', @p389='?' (DbType = DateTime), @p390='?', @p391='?', @p392='?', @p393='?', @p394='?', @p395='?', @p396='?', @p397='?', @p398='?', @p399='?', @p400='?', @p401='?', @p402='?', @p403='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, @p72, @p73, @p74);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p75, @p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, @p99);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p125, @p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143, @p144, @p145, @p146, @p147, @p148, @p149);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p150, @p151, @p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159, @p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, @p170, @p171, @p172, @p173, @p174);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p175, @p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215, @p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224);
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "BVN", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "ImageUrl", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Publicid", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p225, @p226, @p227, @p228, @p229, @p230, @p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, @p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p250, @p251, @p252, @p253, @p254, @p255, @p256);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p257, @p258, @p259, @p260, @p261, @p262, @p263);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p264, @p265, @p266, @p267, @p268, @p269, @p270);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p271, @p272, @p273, @p274, @p275, @p276, @p277);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p278, @p279, @p280, @p281, @p282, @p283, @p284);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p285, @p286, @p287, @p288, @p289, @p290, @p291);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p292, @p293, @p294, @p295, @p296, @p297, @p298);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p299, @p300, @p301, @p302, @p303, @p304, @p305);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p306, @p307, @p308, @p309, @p310, @p311, @p312);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p313, @p314, @p315, @p316, @p317, @p318, @p319);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p320, @p321, @p322, @p323, @p324, @p325, @p326);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p327, @p328, @p329, @p330, @p331, @p332, @p333);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p334, @p335, @p336, @p337, @p338, @p339, @p340);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p341, @p342, @p343, @p344, @p345, @p346, @p347);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p348, @p349, @p350, @p351, @p352, @p353, @p354);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p355, @p356, @p357, @p358, @p359, @p360, @p361);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p362, @p363, @p364, @p365, @p366, @p367, @p368);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p369, @p370, @p371, @p372, @p373, @p374, @p375);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p376, @p377, @p378, @p379, @p380, @p381, @p382);
+INSERT INTO "Address" ("Id", "AppUserId", "City", "CreatedAt", "Name", "State", "UpdatedAt")
+VALUES (@p383, @p384, @p385, @p386, @p387, @p388, @p389);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p390, @p391);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p392, @p393);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p394, @p395);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p396, @p397);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p398, @p399);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p400, @p401);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p402, @p403);
+2022-12-02 13:41:38.023 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:41:38.023 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:41:38.023 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:41:38.023 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:41:38.023 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:41:39.648 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:41:39.714 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/ - - - 404 0 - 71.7635ms
+2022-12-02 13:41:52.854 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:41:52.855 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/ - - - 404 0 - 1.0172ms
+2022-12-02 13:42:49.119 +01:00 [INF] the application has started
+2022-12-02 13:42:50.594 +01:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:42:50.774 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:42:50.784 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:42:50.857 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:42:50.952 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:42:50.952 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:42:50.955 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:42:50.955 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:42:50.955 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:42:52.314 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:42:52.361 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/ - - - 404 0 - 50.9665ms
+2022-12-02 13:45:05.941 +01:00 [INF] the application has started
+2022-12-02 13:45:07.415 +01:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:45:07.595 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:45:07.605 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:45:07.672 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:45:07.770 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:45:07.770 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:45:07.773 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:45:07.773 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:45:07.773 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:45:09.149 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:45:09.200 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/ - - - 404 0 - 56.5508ms
+2022-12-02 13:45:28.035 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/swagger/index.html - -
+2022-12-02 13:45:28.038 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/swagger/index.html - - - 404 0 - 3.1219ms
+2022-12-02 13:47:30.069 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/api/user/get-user-profile - -
+2022-12-02 13:47:30.078 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/api/user/get-user-profile - - - 404 0 - 6.5216ms
+2022-12-02 13:47:58.952 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/api/user - -
+2022-12-02 13:47:58.979 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/api/user - - - 404 0 - 27.3229ms
+2022-12-02 13:49:30.110 +01:00 [INF] the application has started
+2022-12-02 13:49:31.478 +01:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:49:31.659 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:49:31.669 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:49:31.736 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:49:31.839 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:49:31.839 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:49:31.842 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:49:31.842 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:49:31.842 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:49:33.181 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:51:25.471 +01:00 [INF] the application has started
+2022-12-02 13:51:27.251 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:51:27.433 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:51:27.442 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:51:27.514 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:51:27.578 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:51:27.578 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:51:27.580 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:51:27.580 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:51:27.581 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:51:29.019 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 13:54:36.536 +01:00 [INF] the application has started
+2022-12-02 13:54:38.003 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 13:54:38.183 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 13:54:38.193 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 13:54:38.261 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 13:54:38.357 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 13:54:38.357 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 13:54:38.360 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 13:54:38.360 +01:00 [INF] Hosting environment: Development
+2022-12-02 13:54:38.360 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 13:54:39.632 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -
+2022-12-02 14:06:52.090 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not find file '/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/bin/Debug/net6.0/Bnt-AuthenticationService.API.xml'.
+File name: '/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/bin/Debug/net6.0/Bnt-AuthenticationService.API.xml'
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.OpenUrl()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XPath.XPathDocument.LoadFromReader(XmlReader reader, XmlSpace space)
+   at System.Xml.XPath.XPathDocument..ctor(String uri, XmlSpace space)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.<>c__DisplayClass32_0.<IncludeXmlComments>b__0()
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.IncludeXmlComments(SwaggerGenOptions swaggerGenOptions, Func`1 xmlDocFactory, Boolean includeControllerXmlComments)
+   at Bnt_AuthenticationService.API.Extensions.SwaggerConfigurationExtension.<>c.<AddSwaggerConfiguration>b__0_0(SwaggerGenOptions setupAction) in /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/Extensions/SwaggerConfiguration.cs:line 23
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method18(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-02 14:06:52.143 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7297/ - - - 500 - text/html;+charset=utf-8 732529.3194ms
+2022-12-02 14:06:52.502 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/favicon.ico - -
+2022-12-02 14:07:49.016 +01:00 [INF] the application has started
+2022-12-02 14:07:50.536 +01:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2022-12-02 14:07:50.717 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetRoles" AS a)
+2022-12-02 14:07:50.727 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a)
+2022-12-02 14:07:50.797 +01:00 [INF] User profile is available. Using '/Users/thebluehood/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-12-02 14:07:50.866 +01:00 [INF] Now listening on: https://localhost:7297
+2022-12-02 14:07:50.866 +01:00 [INF] Now listening on: http://localhost:5185
+2022-12-02 14:07:50.868 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-02 14:07:50.868 +01:00 [INF] Hosting environment: Development
+2022-12-02 14:07:50.868 +01:00 [INF] Content root path: /Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/Bnt-AuthenticationService.API/
+2022-12-02 14:07:52.312 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7297/ - -

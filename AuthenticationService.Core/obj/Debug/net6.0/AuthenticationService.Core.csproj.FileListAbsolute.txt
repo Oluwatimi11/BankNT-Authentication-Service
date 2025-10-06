@@ -1,0 +1,17 @@
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Core.deps.json
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Core.runtimeconfig.json
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Core.dll
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Core.pdb
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Domain.dll
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/bin/Debug/net6.0/AuthenticationService.Domain.pdb
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.csproj.AssemblyReference.cache
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.AssemblyInfoInputs.cache
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.AssemblyInfo.cs
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.csproj.CoreCompileInputs.cache
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.csproj.CopyComplete
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.dll
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/refint/AuthenticationService.Core.dll
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.pdb
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/AuthenticationService.Core.genruntimeconfig.cache
+/Users/thebluehood/Documents/GitHub/Bnt-AuthenticationService.API/AuthenticationService.Core/obj/Debug/net6.0/ref/AuthenticationService.Core.dll
